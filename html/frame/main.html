@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>主页面</title>
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/chat.css">
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<h1 class="page-header text-center"></h1>
+
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="col-md-6 center" >
+					<h3 class="page-header mychat-header text-center">聊天页面</h1>
+					<div class="row">
+						<form action="" method="post">
+							<div class="col-md-8 left">
+							<!-- ********************content********************* -->
+								<div class="content" id="msg">
+									<ul class="list-group" >
+									<?php foreach($rows as $k=>$v){?>
+										<li 
+									<?php if($v['is_mine']){echo 'class="text-right list"';}else{echo 'class="text-left list"';}?>
+										>
+											<div <?php if($v['is_mine']){echo 'class="bg-primary pull-right msg-son"';}else{echo 'class="bg-danger pull-left msg-son"';}?>>
+												<img src="<?php echo $v['pic']?>" alt="" class='content-pic img-circle pull-left'>
+												<div class="msg-right">
+													<p><?php echo $v['nickname']?></p>
+													<div class="msg-content"><p><?php echo $v['content']?></p></div>
+												</div>
+												<div class="clearfix"></div>
+											</div>
+											<div class="clearfix"></div>
+										</li>
+									<?php } ?>
+									</ul>
+								</div>
+							<!-- *********************list********************* -->	
+								<textarea name="content" id="" cols="30" rows="10" class="mytxt"></textarea>
+								<button class="btn btn-info pull-right">发送</button>
+							</div>
+							<!-- *********************list********************* -->
+							<div class="col-md-4 right">
+								<ul class="list-group">
+								<?php foreach($newArr as $k=>$v) { ?>
+									<li class="list-group-item">
+										<img src="<?php echo $v['pic'] ?>" alt="" class='mypic'>
+								  		<span class="text-primary">
+								  			<a href="#"><?php echo $v['nickname'] ?></a>
+								  		</span>	
+								 	 </li>
+									<?php } ?>	
+								</ul>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="col-md-3"></div>
+			</div>
+
+		</div>
+
+
+	</div>
+</body>
+<script src='./js/jquery-3.2.0.min.js'></script>
+<script>
+	$(function(){
+		$('#msg').scrollTop($('#msg')[0].scrollHeight);
+		console.log($('#msg')[0]);
+	})
+</script>
+</html>

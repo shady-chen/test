@@ -1,0 +1,81 @@
+.center
+{
+	height: 550px;
+	border-radius: 4px;
+	border: 1px solid #ddd;
+}
+
+.mychat-header
+{
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+.left{
+	border: 1px solid #ddd;
+	height: 500px;
+	margin:0;
+	padding: 0px;
+}
+.content{
+	height: 70%;
+	width: 100%;
+	overflow-y:auto;
+}
+.right
+{
+	border: 1px solid #ddd;
+	height: 500px;
+	border-right: none;
+	padding:0px;
+}
+.mytxt{
+	width: 100%;
+	height: 20%;
+	resize: none;
+	outline: none;
+	font-size: 20px;
+	border: 1px solid #ddd;
+}
+.mypic{
+	width: 30px;
+	height: 30px;
+}
+.list
+{
+	padding-right: 10px;
+}
+.content-pic
+{
+	width: 50px;
+	height: 50px;
+	margin-top: 10px;
+}
+.msg-son
+{
+	/*height: 70px;
+	width: 130px;*/
+	margin-top: 15px;
+	border-radius: 5px;
+	overflow: hidden
+}
+.msg-right
+{
+	float: right;
+	height: 100%;
+	/*width: 80px;*/
+	padding-top: 10px;
+	box-sizing: border-box;
+	
+	border-radius: 0px 5px 5px 0;
+}
+.msg-right>p
+{
+	margin:0;
+}
+.msg-content
+{
+	width: 100%;
+	
+	white-space: pre-wrap;
+	
+}
